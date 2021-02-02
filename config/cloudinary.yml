@@ -1,0 +1,12 @@
+development:
+  cloud_name: dnsu4w8aj
+  api_key: 272917151631562
+  api_secret: bVeiBNtPzfsIY_3Asfr6JqvNVP0
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dnsu4w8aj
+  api_key: 272917151631562
+  api_secret: bVeiBNtPzfsIY_3Asfr6JqvNVP0
+  enhance_image_tag: true
+  static_file_support: true
