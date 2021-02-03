@@ -1,0 +1,21 @@
+<div class="mt-5 d-flex justify-content-center">
+<%=form_for(@user, :html => {:muiltipart => true}) do |f| %>
+    <%=f.label :Username %>
+    <%=f.text_field :Username %>
+    <%=f.label :Fullname %>
+    <%=f.text_field :Fullname %>
+
+    <fieldset>
+  <%= f.label :Photo, 'Photo' %>
+  <%= f.hidden_field :Photo_cache %>
+  <%= f.file_field :Photo%>
+</fieldset>
+<fieldset>
+  <%= f.label :Coverimage, 'Coverimage' %>
+  <%= f.hidden_field :Coverimage_cache %>
+  <%= f.file_field :Coverimage%>
+</fieldset>
+
+<%= f.submit "Sign Up" %>
+<%end%>
+<div>

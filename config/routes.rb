@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#new', as: 'logout'
   resources :users
   resources :sessions
+  
+  root to: 'users#new'
 end
