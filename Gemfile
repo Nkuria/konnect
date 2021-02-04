@@ -10,6 +10,8 @@ gem 'rails', '~> 6.1.1'
 gem 'pg'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap'
 
 gem "paperclip"
 
