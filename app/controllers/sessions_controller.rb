@@ -3,10 +3,11 @@ class SessionsController < ApplicationController
   end
   def index; end
   def create
-    @current_user = User.find_by(Username: params[:Username])
+    @current_user = User.find_by(Username: params[:session][:Username])
     if @current_user
       session[:user_id] = @current_user.id
       redirect_to users_path, notice: "Logged in"
+  
     else
       flash.now.alert = 'User does not exist'
       render 'new'
