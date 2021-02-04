@@ -17,8 +17,8 @@ class UsersController < ApplicationController
         @post = @user.posts.paginate(page: params[:page])
     end
     def index
-        @user = User.all
-        @user = @user.includes(:posts)
+        @users = User.all
+        @users = @users.includes(:posts)
     end
     def user_params
         params.require(:user).permit(:Username, :Fullname, :Photo, :Coverimage)

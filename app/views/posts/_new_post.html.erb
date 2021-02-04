@@ -1,4 +1,5 @@
 <%= form_for(@post) do |f| %>
+    <%= render 'error_messages', object: f.object %>
     <%= f.text_area :content, placeholder: "New post" %>
     <f.submit "Create" %>
     <%end%>
