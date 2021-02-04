@@ -1,0 +1,10 @@
+<%provide(:title, @user.Username) %>
+<div>
+<% if @user.posts.any? %>
+    <h3> posts (<%=@user.posts.count %>) </h3>
+    <ul>
+    <%= render @posts %>
+    </ul>
+    <%=will_paginate @posts %>
+<%end%>
+</div>
