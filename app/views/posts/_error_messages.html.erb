@@ -1,0 +1,8 @@
+<% if object.errors.any? %>
+    <p> The form contains <%=pluralize(object.errors.count, "Error") %>
+    <ul>
+    <% object.errors.full_messages.each do |msg| %>
+        <li> <%=msg %> </li>
+    <%end%>
+        </ul
+<%end%>
