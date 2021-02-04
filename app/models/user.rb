@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     mount_uploader :Photo, ImageUploader
     mount_uploader :Coverimage, ImageUploader
-    has_many :posts
+    has_many :posts, dependent: :destroy
 
 
     validates_uniqueness_of :Username
