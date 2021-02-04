@@ -13,6 +13,15 @@
   </head>
 
   <body>
+  <% flash.each do |type, message| %>
+    <div><%= message %></div>
+<% end %>
+<div class="col-2 bg-dark h-100">
+<%= aside %>
+</div>
+<div class="col-10">
+<nav>
+<i class="fab fa-twitter"></i>
     <%= yield %>
     <br>
     <br>
