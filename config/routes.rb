@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#new', as: 'logout'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
   resources :users
   resources :sessions
+  resources :posts
+  resources :followships
   
-  root to: 'users#new'
+  root to: 'sessions#new'
 end

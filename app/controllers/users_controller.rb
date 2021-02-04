@@ -6,8 +6,9 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
-            redirect_to root_path, notice: "Signed up succesfully"
+            redirect_to users_path, notice: "Signed up succesfully"
         else
+            puts @user.errors.full_messages
             render "new"
         end
     end
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
     end
     def index
         @user = User.all
+        @user = @user.includes(:posts)
     end
     def user_params
         params.require(:user).permit(:Username, :Fullname, :Photo, :Coverimage)
