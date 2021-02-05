@@ -20,6 +20,12 @@ class UsersController < ApplicationController
         @users = User.all
         @users = @users.includes(:posts)
     end
+    def followers
+        @head = "Followers"
+        @user = User.find(params[:id])
+        @users = @user.followers.paginate(page: params[:page])
+        render 'show_follow'
+    end
     def user_params
         params.require(:user).permit(:Username, :Fullname, :Photo, :Coverimage)
     end
