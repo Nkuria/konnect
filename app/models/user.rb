@@ -14,6 +14,16 @@ class User < ApplicationRecord
     validates :Photo, presence: true
     validates :Coverimage, presence: true
 
+    scope :who_to_follow, lambda { |user_id|
+        where(
+          "id NOT IN ( SELECT followed_id
+FROM followings
+WHERE follower_id = ?
+)",
+          user_id
+        )
+      }
+
     def following?(user2)
         followings.find_by_followed_id(user2.id)
     end

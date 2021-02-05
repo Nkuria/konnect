@@ -1,7 +1,23 @@
+<div class= "users-nav d-flex justify-content-between align-items-center w-100 ">
 
-<%= link_to "Sign out", logout_path, method: "get" %>
+<div>
+<%= link_to "Posts", posts_path %>
+<a class="px-3" href src ="#" > Photos </a>
+<a   href src ="#" > Videos </a>
+</div>
+<h5> who to Follow </h5>
 
-<div class= "users-nav d-flex">
+</div>
 
+
+<div class="container-fluid">
+<div class="row">
+<div class ="col-9"> 
+<%= render 'posts/new_post' %>
+</div
+
+
+
+</div>
 
 </div>

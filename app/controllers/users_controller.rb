@@ -17,8 +17,10 @@ class UsersController < ApplicationController
         @post = @user.posts.paginate(page: params[:page])
     end
     def index
+        @post = Post.new
         @users = User.all
         @users = @users.includes(:posts)
+        @who_to_follow = User.who_to_follow(current_user.id)
     end
     def followers
         @head = "Followers"
