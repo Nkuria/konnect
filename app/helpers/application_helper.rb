@@ -1,9 +1,9 @@
 module ApplicationHelper
     def aside
         if current_user
-            render 'layout/aside_logged_in'
+            render 'layouts/aside_logged_in'
         else
-            render 'layout/aside_logged_out' 
+            render 'layouts/aside_logged_out' 
         end
     end
 
