@@ -20,18 +20,23 @@
   <% flash.each do |type, message| %>
     <div><%= message %></div>
 <% end %>
-<div class="col-2 bg-dark h-100">
+<div class = "container-fluid">
+<div class = "row">
+<div class="col-3 bg-dark aside pt-3">
 <%= aside %>
 </div>
-<div class="col-10">
+<div class="col-9">
 <nav>
-<i class="fab fa-twitter"></i>
-<ul class="d-flex">
+
+<ul class="navbar d-flex justify-content-between ">
 <%=navbar_logged_in%>
 </ul>
 </nav>
 <div>
     <%= yield %>
+    </div>
+    </div>
+    </div>
     </div>
     <br>
     <br>

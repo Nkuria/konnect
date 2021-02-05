@@ -1,11 +1,17 @@
-
+<div class="d-flex align-items-center flex-column justify-content-center">
 <h1> Log In </h1>
 
 <%= form_for(:session, url: login_path) do |f| %>
-    <%=f.label :Username %>
-    <%=f.text_field :Username %>
-    <%=f.submit "Login", class: "btn" %>
+    <div class = "d-flex align-items-center mb-3 ">
+    <span class="mx-2"><%=f.label :Username %> </span>
+    <span class"login-input"><%=f.text_field :Username %></span>
+    <span class="mx-2"> <%=f.submit "Login", class: "btn btn-primary" %> </span>
+    </div>
+    
+    
+    
     <%end%>
     <p> No Account? <%= link_to "Create Account", signup_path %>
 
     <%= link_to "Sign out", logout_path, method: "get" %>
+    </div>

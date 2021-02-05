@@ -1,3 +1,25 @@
-body {
-    background-color: red;
-}
+html, body {
+    margin:0px;
+    height:100%;
+  }
+  a {
+      text-decoration: none;
+      color: grey;
+  }
+  .aside {
+      height: 100vh;
+  }
+  .navbar {
+      background-color: #51A2E1;
+      padding-top: 2%;
+      padding-bottom: 2%;
+  }
+
+  .nav-out {
+      justify-content: space-between;
+  }
+  /* login form */
+
+  .login-input {
+      border-radius: 100px;
+  }
