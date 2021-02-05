@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
     
 
-before_filter :authorize, only: [:edit, :update]
+before_action :authorize, only: [:edit, :update]
+def new
+    @post = Post.new
+end
     def create
         @post = current_user.posts.build(params[:posts])
         if @post.save

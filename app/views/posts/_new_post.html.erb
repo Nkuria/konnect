@@ -1,5 +1,7 @@
 <%= form_for(@post) do |f| %>
     <%= render 'error_messages', object: f.object %>
+    <div class="d-flex flex-column">
     <%= f.text_area :content, placeholder: "New post" %>
-    <f.submit "Create" %>
-    <%end%>
+    <%= f.submit "Create", class: "btn btn-primary"%>
+    </div>
+<%end%>
