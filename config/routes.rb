@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
