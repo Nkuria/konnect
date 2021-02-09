@@ -62,10 +62,15 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (10.2.4.0)
+      execjs
     aws_cf_signer (0.1.3)
     bindex (0.8.1)
     bootsnap (1.6.0)
       msgpack (~> 1.0)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.35.3)
@@ -93,6 +98,7 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
+    execjs (2.7.0)
     ffi (1.14.2-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -245,6 +251,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
+  bootstrap-sass (~> 3.4.1)
   byebug
   capybara (>= 3.26)
   carrierwave
@@ -256,6 +263,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
   sass-rails (>= 6)
+  sassc-rails (>= 2.1.0)
   selenium-webdriver
   turbolinks (~> 5)
   tzinfo-data

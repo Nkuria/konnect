@@ -30,9 +30,16 @@ html, body {
       height: 10vh;
       width: auto;
   }
+  .img-icon2 {
+     height: auto;
+    width: 7vw;
+  }
 
   .users-nav {
       background-color: #F5F6F8;
       height:  10vh;
-      width: 5vw;
   }
+
+  /* .follow {
+      display: grid;
+  } */
