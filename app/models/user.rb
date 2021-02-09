@@ -24,9 +24,9 @@ WHERE follower_id = ?
         )
       }
 
-    def following?(user2)
-        followings.find_by_followed_id(user2.id)
-    end
+      def following?(user)
+        followed_users.include?(user)
+      end
 
     def follow!(user2)
         followings.create!(followed_id: user2.id)

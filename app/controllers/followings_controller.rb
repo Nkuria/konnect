@@ -1,4 +1,10 @@
 class FollowingsController < ApplicationController
+    def new
+        @following = Following.new
+      end
+      def index
+        @followings = Following.all
+      end
     def create
         @user = User.find(params[:following][:followed_id])
         current_user.follow!(@user)
@@ -10,5 +16,9 @@ class FollowingsController < ApplicationController
         current_user.unfollow!(@user)
         redirect_to @user
     end
+
+   
+    
+      
 
 end

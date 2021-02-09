@@ -40,6 +40,8 @@ html, body {
       height:  10vh;
   }
 
-  /* .follow {
-      display: grid;
-  } */
+  /* show view */
+
+  .show-view {
+      margin-top: -2%;
+  }

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:index, :new]
   resources :posts
-  resources :followships
+  resources :followings
   
   root to: 'sessions#new'
 end

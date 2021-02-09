@@ -14,7 +14,8 @@ class UsersController < ApplicationController
     end
     def show
         @user = User.find(params[:id])
-        @post = @user.posts.paginate(page: params[:page])
+        @post = Post.new
+        @posts = @user.posts
     end
     def index
         @post = Post.new
