@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: konnect_production
-  username: konnect
-  password: <%= ENV['KONNECT_DATABASE_PASSWORD'] %>
+  username: rails
+  password: rails..
