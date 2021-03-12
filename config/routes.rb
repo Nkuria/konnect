@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'sessions/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -12,9 +14,9 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   post 'login', to: 'sessions#create'
   resources :users
-  resources :sessions, only: [:index, :new]
+  resources :sessions, only: %i[index new]
   resources :posts
   resources :followings
-  
+
   root to: 'sessions#new'
 end

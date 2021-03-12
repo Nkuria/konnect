@@ -1,26 +1,25 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "~> 2.7.2"
+ruby '~> 2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
 
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'will_paginate', '~> 3.1.1'
-gem 'will_paginate-bootstrap'
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
 gem 'faker'
 gem 'hirb', '~> 0.7.3'
 gem 'jquery-rails', '~> 4.4'
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
+gem 'sassc-rails', '>= 2.1.0'
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap'
 
-
-gem "paperclip"
+gem 'paperclip'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -45,10 +44,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -56,8 +55,8 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
+
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'pg'
 end
 
 group :test do
@@ -65,10 +64,10 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
   gem 'launchy'
   gem 'rails-controller-testing'
   gem 'shoulda-matchers'
+  gem 'webdrivers'
 end
 
 group :production do
@@ -76,4 +75,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
