@@ -7,7 +7,7 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
-gem 'pg'
+
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'will_paginate', '~> 3.1.1'
@@ -57,6 +57,7 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'pg'
 end
 
 group :test do
