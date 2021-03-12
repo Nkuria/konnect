@@ -14,6 +14,11 @@ gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'faker'
+gem 'hirb', '~> 0.7.3'
+gem 'jquery-rails', '~> 4.4'
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
+
 
 gem "paperclip"
 
@@ -41,8 +46,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', ">= 3.9.0"
-  gem 'factory_girl_rails', '4.1.0'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -59,6 +65,13 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'launchy'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

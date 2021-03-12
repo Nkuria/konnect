@@ -4,12 +4,12 @@
 <%= render 'posts/error_messages', object: f.object %>
   <div class="mb-4">
     <%=f.label :Username %>
-    <%=f.text_field :Username %>
+    <%=f.text_field :Username, class: 'form-control', placeholder: 'Enter user name' %>
   </div>
 
   <div class="mb-4">
     <%=f.label :Fullname %>
-    <%=f.text_field :Fullname %>
+    <%=f.text_field :Fullname,  class: 'form-control', placeholder: 'Enter full name' %>
   </div>
 
   <div class="mb-4"> 
