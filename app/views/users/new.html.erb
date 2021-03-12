@@ -1,17 +1,18 @@
-<div class="mt-5 d-flex justify-content-center  flex-column">
+<div class="mt-5 d-flex justify-content-center align-items-center flex-column">
 
 <%=form_for(@user, :html => {:muiltipart => true}) do |f| %>
 <%= render 'posts/error_messages', object: f.object %>
-  <div>
+  <div class="mb-4">
     <%=f.label :Username %>
     <%=f.text_field :Username %>
-  </div
-  <div>
+  </div>
+
+  <div class="mb-4">
     <%=f.label :Fullname %>
     <%=f.text_field :Fullname %>
   </div>
 
-  <div> 
+  <div class="mb-4"> 
   <fieldset>
   <%= f.label :Photo, 'Photo' %>
   <%= f.hidden_field :Photo_cache %>
@@ -19,14 +20,15 @@
 </fieldset>
 </div>
 
-<div>
+<div class="mb-4">
 <fieldset>
   <%= f.label :Coverimage, 'Coverimage' %>
   <%= f.hidden_field :Coverimage_cache %>
   <%= f.file_field :Coverimage%>
 </fieldset>
 </div>
-<%= f.submit "Sign Up" %>
+
+<%= f.submit "Sign Up", class: "btn btn-large btn-primary"%>
 <%end%>
 </div>
 <%= link_to "Log in", login_path, method: "get" %>
