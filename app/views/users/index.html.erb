@@ -15,6 +15,17 @@
 
 <div class ="col-8 w-75"> 
 <%= render 'posts/new_post' %>
+<div>
+<h3> All Posts </h3>
+<% @posts.each do |post| %>
+  <div>
+ <img class=" w-25 mt-3" src='<%=post.user.Photo %>' alt="pic here" />
+  <%=post.user.Username %>:
+  <%=post.content %>
+  </div>
+  <%end%>
+  
+</div>
 </div>
 
 <div class ="col-4 d-flex flex-column" >

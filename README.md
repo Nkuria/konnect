@@ -1,7 +1,7 @@
 ## Konnect
-This project is a social app almost similar to tweeter. Users can follow each other. USers can also create posts and see other users posts.
-<img src="app\assets\images\capture1.PNG">
-<img src="app\assets\images\capture2.PNG">
+This project is a social app almost similar to tweeter. Users can follow each other. Users can also create posts and see other users posts.
+![Screenshot](./app/assets/images/capture1.png)
+![Screenshot](./app/assets/images/capture2.png)
 
 
 ## Application Functionality

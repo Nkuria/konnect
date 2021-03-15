@@ -23,6 +23,19 @@ WHERE follower_id = ?
                           )
                         }
 
+
+
+
+   scope :followed_by, lambda { |user_id|
+    where(
+      "id IN ( SELECT follower_id
+                 FROM followings
+                 WHERE followed_id = ?
+               )",
+      user_id
+    )
+  }
+
   def following?(user)
     followed_users.include?(user)
   end

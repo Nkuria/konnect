@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
   def index
     @post = Post.new
+    @posts = Post.all
     @users = User.all
     @users = @users.includes(:posts)
     @who_to_follow = User.who_to_follow(current_user.id)
