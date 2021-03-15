@@ -1,0 +1,33 @@
+<div class="mt-5 d-flex justify-content-center align-items-center flex-column">
+
+<%=form_for(@user, :html => {:muiltipart => true}) do |f| %>
+<%= render 'posts/error_messages', object: f.object %>
+  <div class="mb-4">
+    <%=f.label :Username %>
+    <%=f.text_field :Username, class: 'form-control', placeholder: 'Enter user name' %>
+  </div>
+
+  <div class="mb-4">
+    <%=f.label :Fullname %>
+    <%=f.text_field :Fullname,  class: 'form-control', placeholder: 'Enter full name' %>
+  </div>
+
+  <div class="mb-4"> 
+  <fieldset>
+  <%= f.label :Photo, 'Photo' %>
+  <%= f.hidden_field :Photo_cache %>
+  <%= f.file_field :Photo%>
+</fieldset>
+</div>
+
+<div class="mb-4">
+<fieldset>
+  <%= f.label :Coverimage, 'Coverimage' %>
+  <%= f.hidden_field :Coverimage_cache %>
+  <%= f.file_field :Coverimage%>
+</fieldset>
+</div>
+
+<%= f.submit "Sign Up", class: "btn btn-large btn-primary"%>
+<%end%>
+</div>

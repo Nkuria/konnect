@@ -1,0 +1,53 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.aside {
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #51a2e1;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.nav-out {
+  justify-content: space-between;
+}
+
+/* login form */
+
+.login-input {
+  border-radius: 100px;
+}
+
+/* index page */
+
+.img-icon {
+  height: 10vh;
+  width: auto;
+}
+
+.img-icon2 {
+  height: auto;
+  width: 7vw;
+}
+
+.users-nav {
+  background-color: #f5f6f8;
+  height: 10vh;
+}
+
+/* show view */
+
+.show-view {
+  margin-top: -2%;
+}

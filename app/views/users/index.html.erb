@@ -1,0 +1,43 @@
+<div class= "users-nav d-flex justify-content-between align-items-center w-100 ">
+
+<div>
+<%= link_to "Posts", posts_path %>
+<a class="px-3" href src ="#" > Photos </a>
+<a   href src ="#" > Videos </a>
+</div>
+<h5> who to Follow </h5>
+
+</div>
+
+
+<div class="d-flex w-100 flex-row">
+
+
+<div class ="col-8 w-75"> 
+<%= render 'posts/new_post' %>
+<div>
+<h3> All Posts Total: <%=@posts.count%> </h3>
+<% @posts.each do |post| %>
+  <div>
+ <img class=" w-25 mt-3" src='<%=post.user.Photo %>' alt="pic here" />
+  <%=post.user.Username %>:
+  <%=post.content %>
+  </div>
+  <%end%>
+  
+</div>
+</div>
+
+<div class ="col-4 d-flex flex-column" >
+  <ul class="users-list">
+
+  <% User.who_to_follow(current_user.id).each do |u|%>
+  <%= who_to_follow?(u) %>
+  <br>
+   <% end %>
+  </ul>
+</div>
+
+
+
+</div>

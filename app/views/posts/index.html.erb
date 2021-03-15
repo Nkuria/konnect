@@ -1,0 +1,12 @@
+<h3> All Posts, Total: <%=@posts.count%> </h3>
+<div class="d-flex flex-column">
+<% @posts.each do |post| %>
+    <div>
+   <img class="h-50 w-25" src='<%=post.user.Photo %>' alt="pic here" />
+    <%=post.user.Username %>:
+    <%=post.content %>
+    </div>
+    <%end%>
+     
+    </div>
+    

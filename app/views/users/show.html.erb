@@ -1,0 +1,78 @@
+<div class="d-flex show-view">
+
+<div class="d-flex flex-column w-75">
+<img class= "w-100 h-25"src= "<%=@user.Coverimage%>"  alt="pic here" />
+
+<div class= "users-nav d-flex justify-content-between align-items-center w-100 ">
+
+<div>
+<%= link_to "Posts", posts_path %>
+<a class="px-3" href src ="#" > Photos </a>
+<a   href src ="#" > Videos </a>
+</div>
+</div>
+
+<div class ="col-8 w-100 mb-2"> 
+<%= render 'posts/new_post' %>
+</div>
+ <div>
+ <h3> All Posts Total: <%=@posts.count%> </h3>
+<% @posts.each do |post| %>
+    <div class = "d-flex mb-2">
+    <img class = "w-25"src ="<%=@user.Photo%>" alt="pic here" />
+    <div class ="d-flex flex-column justify-content-between" >
+  <span class="content"><%= post.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(post.created_at) %> ago.
+    </div>
+    </div>
+  </span>
+
+<%end%>
+</div>
+
+</div>
+
+<div class="d-flex flex-column"> 
+<div class="d-flex justify-content-center align-items-center mt-2">
+<img class="w-50 h-50" src = "<%=@user.Photo%>" alt="pic here" />
+<p class="px-2"> <%= @user.Username%> </p>
+</div>
+<div class = "d-flex justify-content-around">
+<div class="d-flex flex-column">
+<p class=""> <%= @user.followed_users.count  %> </p>
+<p class=""> Following </p>
+</div>
+ 
+<div class="d-flex flex-column">
+<p class=""> <%= @user.followers.count  %> </p>
+<p class=""> Followers </p>
+</div>
+
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+<%= following_method(@user)%>
+</div>
+<div class="d-flex flex-column justify-content-center align-items-center">
+<h3> Followers </h3>
+<% User.followed_by(@user.id).each do |u|%>
+ 
+  
+ 
+   <%= link_to user_path(u), class: "nav-link text-dark" do %>
+         
+ <img src="<%=u.Photo%>" class="w-25 h-50"/> <%= u.Username %>
+ <% end %>
+ <br>
+
+          <% end %>
+          </div>
+</div>
+
+</div>
+
+
+
+
+</div>

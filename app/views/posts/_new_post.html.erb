@@ -1,0 +1,7 @@
+<%= form_for(@post) do |f| %>
+    
+    <div class="d-flex flex-column">
+    <%= f.text_area :content, placeholder: "New post" %>
+    <%= f.submit "Create", class: "btn btn-primary"%>
+    </div>
+<%end%>

@@ -2,15 +2,45 @@
 <html>
   <head>
     <title>Konnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'style.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script
+    src="https://kit.fontawesome.com/16d2250538.js"
+    crossorigin="anonymous"
+  ></script>
   </head>
 
   <body>
+  <% flash.each do |type, message| %>
+    <div><%= message %></div>
+<% end %>
+<div class = "container-fluid">
+<div class = "row">
+<div class="col-3 bg-dark aside pt-3">
+<%= aside %>
+</div>
+<div class="col-9">
+<nav>
+
+<ul class="navbar d-flex justify-content-between ">
+<%=navbar_logged_in%>
+</ul>
+</nav>
+<div>
     <%= yield %>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
   </body>
 </html>
