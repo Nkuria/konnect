@@ -4,7 +4,8 @@ class Post < ApplicationRecord
   validates :user_id, presence: true
   validates :content, presence: true
 
-  # default_scope  {'posts.created_at DESC'}
+  def self.default_scope
+    order('posts.created_at DESC')
+  end
 
-  # default_scope order: 'posts.created_at DESC'
 end

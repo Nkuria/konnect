@@ -6,7 +6,7 @@ This project is a social app almost similar to tweeter. Users can follow each ot
 
 ## Application Functionality
 - User can sign up ,login and logout.
-- post can be created 
+- Post can be created 
 - Only logged in users can create and edit a post
 - A user can follow and unfollow another user and can be followed in return
 - User can see all posts 
@@ -18,20 +18,19 @@ This project is a social app almost similar to tweeter. Users can follow each ot
 - Rails -v 6.0.3.4
 - SQLite3
 - VScode
-- cloudinary
-- carrierwave
-- rspec
+- Cloudinary
+- Carrierwave
+- Rspec
 
 ### Prerequisites
 - Ruby -v  2.7.2
 - Rails -v 6.0.3.4
 - Pgsql
 - VScode
-- cloudinary gem
-- carrier_wave gem
+- Cloudinary gem
+- Carrier_wave gem
 
 ## Getting Started
-
 
 
 To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
@@ -41,11 +40,11 @@ To get this project up and running locally, you must already have ruby and neces
 1. Open Terminal.
 2. Navigate to your desired location to download the contents of this repository.
 3. Copy and paste the following code into the Terminal: git clone https://github.com/Nkuria/konnect.git
-4. Run ```konnect```.
+4. Run ```cd konnect```.
 5. Run ```bundle install``` to get the necesary gems.
 6. Run `rails db:migrate`.
 7. Run ```rails s``` to run the server
-8. Write localhost:3000 on your browser
+8. Type localhost:3000 on your browser
 9. The server will run
 
 ## Live Demo

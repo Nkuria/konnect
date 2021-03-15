@@ -16,7 +16,7 @@
 <div class ="col-8 w-75"> 
 <%= render 'posts/new_post' %>
 <div>
-<h3> All Posts </h3>
+<h3> All Posts Total: <%=@posts.count%> </h3>
 <% @posts.each do |post| %>
   <div>
  <img class=" w-25 mt-3" src='<%=post.user.Photo %>' alt="pic here" />

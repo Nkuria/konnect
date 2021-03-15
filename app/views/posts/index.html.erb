@@ -1,4 +1,4 @@
-<h3> All Posts </h3>
+<h3> All Posts, Total: <%=@posts.count%> </h3>
 <div class="d-flex flex-column">
 <% @posts.each do |post| %>
     <div>
@@ -7,5 +7,6 @@
     <%=post.content %>
     </div>
     <%end%>
+     
     </div>
     
